@@ -1,0 +1,7 @@
+# config/prod.yaml
+environment: PROD
+databricks:
+  host: https://adb-prd.azuredatabricks.net
+  cluster: large (16 nodes)
+  token_from: kv-etl-prd
+approval_required: true

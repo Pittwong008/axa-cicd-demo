@@ -1,0 +1,16 @@
+# config/staging.yaml
+environment: STAGING
+databricks:
+  host: https://adb-stg.azuredatabricks.net
+  cluster: medium (8 nodes)         # 跟PROD一样大
+  token_from: kv-etl-stg
+data:
+  sample_size: 500 securities
+
+# config/prod.yaml
+environment: PROD
+databricks:
+  host: https://adb-prd.azuredatabricks.net
+  cluster: large (16 nodes)
+  token_from: kv-etl-prd
+approval_required: true
